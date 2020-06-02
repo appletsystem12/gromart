@@ -19,7 +19,7 @@
             android:id="@+id/backbutton"
             android:layout_margin="@dimen/_10sdp"
             android:layout_centerVertical="true"
-            android:background="@drawable/ic_back_white"/>
+            android:src="@drawable/ic_back_white"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                         android:layout_height="120dp"
                         android:gravity="center"
                         android:hint="Your Address here"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:textStyle="bold"
                         android:layout_weight="2"/>
 
@@ -81,9 +81,10 @@
                         android:layout_width="15sp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="@dimen/_12sdp"
                         android:background="@drawable/white_button"
                         android:textStyle="bold"
+                        android:layout_marginRight="@dimen/_5sdp"
                         android:gravity="center"
                         android:padding="@dimen/_10sdp"
                         android:text="UPDATE"
@@ -106,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="15sp"
-                android:textSize="@dimen/_14sdp"
+                android:textSize="@dimen/_12sdp"
                 android:gravity="center"
                 android:hint="Delivery date will be here"/>
 
@@ -130,26 +131,28 @@
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_10sdp">
-                        <Button
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Daily"
                             android:textColor="#fff"
+                            android:textSize="@dimen/_12sdp"
                             android:textStyle="bold"
                             android:background="@drawable/custom_button"
                             android:gravity="center"
                             android:layout_marginEnd="@dimen/_5sdp"
-                            android:padding="@dimen/_5sdp"
+                            android:padding="@dimen/_10sdp"
                             />
 
-                        <Button
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:layout_marginLeft="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"
                             android:text="Alternate Days"
                             android:textColor="#fff"
                             android:textStyle="bold"
@@ -165,39 +168,31 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_10sdp">
-                        <Button
+
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Every 3 days"
-                            android:textColor="#fff"
-                            android:visibility="gone"
-                            android:textStyle="bold"
-                            android:layout_marginEnd="@dimen/_5sdp"
-                            android:background="@drawable/custom_button"
-                            android:gravity="center"
-                            />
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-
+                            android:padding="@dimen/_10sdp"
                             android:layout_marginEnd="@dimen/_5sdp"
                             android:text="Weekly"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:textSize="@dimen/_12sdp"
                             android:textColor="#fff"
                             android:textStyle="bold"
                             android:background="@drawable/custom_button"
                             />
 
-                        <Button
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_5sdp"
                             android:text="Monthly"
+                            android:textSize="@dimen/_12sdp"
                             android:textColor="#fff"
                             android:layout_weight="1"
+                            android:padding="@dimen/_10sdp"
+                            android:gravity="center"
                             android:textStyle="bold"
                             android:background="@drawable/custom_button"
                             />
@@ -252,10 +247,12 @@
                 android:textStyle="bold"
                 />
         </LinearLayout>
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PLace ORDER"
+            android:text="PLACE ORDER"
+            android:padding="@dimen/_8sdp"
+            android:gravity="center"
             android:textColor="#D71149"
             android:id="@+id/place_order"
             android:textStyle="bold"
