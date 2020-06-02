@@ -9,55 +9,46 @@
     android:layout_height="match_parent"
     tools:context=".activity.EditAccount">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:id="@+id/backbutton"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_back_white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </RelativeLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_200sdp"
-            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/_15sdp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:src="@drawable/ic_back"
-                    android:tint="@color/white" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="My profile"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_16sdp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="@dimen/_10sdp"
-                    android:text="Save"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_16sdp" />
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_150sdp"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="@dimen/_10sdp"
+
                 android:gravity="center"
+                android:background="@color/colorPrimary"
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -70,89 +61,107 @@
                     app:civ_border_width="2dp"
                     app:civ_circle_background_color="@color/black" />
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/fabcamera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <RelativeLayout
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_alignEnd="@id/profile_image"
                     android:layout_alignBottom="@id/profile_image"
-                    android:elevation="@dimen/_10sdp"
-                    android:src="@drawable/camera"
-                    android:tint="@color/white"
-                    app:fabSize="mini"
-                    />
+                    android:background="@drawable/circle_orange_gradient_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/camera"
+
+                        android:tint="@color/white"/>
+                </RelativeLayout>
+
+
             </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:padding="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:textColor="@color/d_grey"
+                android:id="@+id/first_name"
+                android:textSize="@dimen/_12sdp"
+                android:background="@drawable/whitebutton"
+                />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:textColor="@color/d_grey"
+                    android:id="@+id/lastname"
+                    android:textSize="@dimen/_12sdp"
+                    android:background="@drawable/whitebutton"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:textColor="@color/d_grey"
+                    android:id="@+id/email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="@dimen/_12sdp"
+                    android:background="@drawable/whitebutton"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Number"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textColor="@color/d_grey"
+                    android:id="@+id/phone"
+                    android:inputType="number"
+                    android:textSize="@dimen/_12sdp"
+                    android:background="@drawable/whitebutton"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Save"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                   android:background="@drawable/pink_button"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp" />
+            </LinearLayout>
 
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:orientation="vertical"
-        android:padding="@dimen/_10sdp">
+    </ScrollView>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="First Name"
-        android:padding="@dimen/_8sdp"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:textColor="@color/d_grey"
-        android:id="@+id/first_name"
-        android:shadowRadius="5dp"
-        android:textSize="@dimen/_12sdp"
-        android:background="@drawable/whitebutton"
-        />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Last Name"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:padding="@dimen/_8sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_10sdp"
-            android:textColor="@color/d_grey"
-            android:id="@+id/lastname"
-            android:shadowRadius="5dp"
-            android:textSize="@dimen/_12sdp"
-            android:background="@drawable/whitebutton"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:padding="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_10sdp"
-            android:textColor="@color/d_grey"
-            android:id="@+id/email"
-            android:inputType="textEmailAddress"
-            android:textSize="@dimen/_12sdp"
-            android:background="@drawable/whitebutton"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Number"
-            android:padding="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:textColor="@color/d_grey"
-            android:id="@+id/phone"
-            android:inputType="number"
-            android:textSize="@dimen/_12sdp"
-            android:background="@drawable/whitebutton"
-            />
-
-
-
-    </LinearLayout>
-
-    </LinearLayout>
+</LinearLayout>

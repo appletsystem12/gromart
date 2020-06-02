@@ -1,39 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:fitsSystemWindows="true"
-    tools:context=".activity.LoginActivity">
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/mobile_ui_white"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/mobile_ui_white_flip"
         android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/rl_main_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_50sdp"
             android:orientation="vertical"
             android:layout_margin="@dimen/_30sdp"
             >
 
             <RelativeLayout
+                android:id="@+id/rl_up"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/circle_orange_gradient_bg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/upload"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/rl_logo"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_120sdp">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_up">
 
                 <ImageView
                     android:id="@+id/iv_logo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:layout_marginTop="@dimen/_20sdp"
+
                     android:padding="@dimen/_10sdp"
 
                     android:src="@drawable/sampl_logo" />
@@ -42,10 +59,48 @@
 
 
             <RelativeLayout
-                android:id="@+id/rl_mobile"
+                android:id="@+id/rl_f_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rl_logo"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/iv_phn"
+                    android:background="@android:color/transparent"
+                    android:hint="First Name"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/d_grey"
+                    android:textSize="@dimen/_16sdp" />
+
+                <ImageView
+                    android:id="@+id/iv_f_name"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@mipmap/name"
+                    android:tint="@color/grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/rl_f_name"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/grey_border" />
+
+            <RelativeLayout
+                android:id="@+id/rl_l_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_f_name"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:padding="10dp">
 
@@ -55,35 +110,35 @@
                     android:layout_centerVertical="true"
                     android:layout_toStartOf="@+id/iv_phn"
                     android:background="@android:color/transparent"
-                    android:hint="Mobile Number"
+                    android:hint="Last Name"
                     android:textColor="@color/colorAccent"
                     android:textColorHint="@color/d_grey"
                     android:textSize="@dimen/_16sdp" />
 
                 <ImageView
-                    android:id="@+id/iv_phn"
+                    android:id="@+id/iv_l_name"
                     android:layout_width="@dimen/_28sdp"
                     android:layout_height="@dimen/_28sdp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:padding="5dp"
-                    android:src="@mipmap/smartphone"
+                    android:src="@mipmap/name"
                     android:tint="@color/grey" />
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_below="@+id/rl_mobile"
+                android:layout_below="@+id/rl_l_name"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:background="@color/grey_border" />
 
             <RelativeLayout
-                android:id="@+id/rl_otp"
+                android:id="@+id/rl_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rl_mobile"
+                android:layout_below="@+id/rl_l_name"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:padding="10dp">
 
@@ -93,7 +148,7 @@
                     android:layout_centerVertical="true"
                     android:layout_toStartOf="@+id/iv_otp"
                     android:background="@android:color/transparent"
-                    android:hint="OTP"
+                    android:hint="Email"
                     android:textColor="@color/colorAccent"
                     android:textColorHint="@color/d_grey"
                     android:textSize="@dimen/_16sdp" />
@@ -105,14 +160,14 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:padding="5dp"
-                    android:src="@mipmap/mypass"
+                    android:src="@mipmap/mail"
                     android:tint="@color/grey" />
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_below="@+id/rl_otp"
+                android:layout_below="@+id/rl_email"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:background="@color/grey_border" />
@@ -122,7 +177,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_50sdp"
-                android:layout_below="@+id/rl_otp">
+                android:layout_below="@+id/rl_email">
 
                 <TextView
                     android:id="@+id/tv_login"
@@ -132,7 +187,7 @@
                     android:background="@drawable/pink_button"
                     android:gravity="center"
                     android:padding="@dimen/_8sdp"
-                    android:text="Login"
+                    android:text="Register"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_18sdp" />
                 <TextView
@@ -151,27 +206,9 @@
 
 
 
-            <RelativeLayout
-                android:id="@+id/rl_down"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginTop="@dimen/_50sdp"
-                android:layout_below="@+id/rl_login"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/circle_orange_gradient_bg">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_centerInParent="true"
-                    android:src="@mipmap/download"
-
-                   />
-            </RelativeLayout>
         </RelativeLayout>
 
     </RelativeLayout>
 
-
-</RelativeLayout>
+</LinearLayout>

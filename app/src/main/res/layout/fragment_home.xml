@@ -3,136 +3,137 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:id="@+id/v_flipper"
+                android:autoStart="true"
+                android:layout_gravity="center"
+                android:flipInterval="3000">
+
+                <ImageView
+                    android:id="@+id/slide1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/slide2"
+                    android:contentDescription="@string/desc" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/slide2"
+                    android:contentDescription="@string/desc"
+                    android:background="@drawable/slide3"/>
+            </ViewFlipper>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/find_products"
+                android:textColor="#D71147"
+                android:id="@+id/findproducts"
+                android:background="#FAFBFB"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/_18sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:clipToPadding="false"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ViewFlipper
+                android:padding="10sp"
+                android:visibility="gone"
+                android:weightSum="3"
+                android:orientation="horizontal">
+                <Button
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_180sdp"
-                    android:id="@+id/v_flipper"
-                    android:autoStart="true"
-                    android:layout_gravity="center"
-                    android:flipInterval="3000">
+                    android:layout_height="140sp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10sp"
+                    android:id="@+id/promo"
+                    android:background="@drawable/bestpromo"/>
 
-                    <ImageView
-                        android:id="@+id/slide1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/slide2"
-                        android:contentDescription="@string/desc" />
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="350sp"
-                        android:id="@+id/slide2"
-                        android:contentDescription="@string/desc"
-                        android:background="@drawable/slide3"/>
-                </ViewFlipper>
-
-                <TextView
+                <Button
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25sp"
-                    android:text="@string/find_products"
-                    android:textColor="#D71147"
-                    android:id="@+id/findproducts"
-                    android:background="#FAFBFB"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="@dimen/_18sdp"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcvProduct"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:overScrollMode="never"
-                    android:clipToPadding="false"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:paddingStart="@dimen/_10sdp"
-                    android:paddingEnd="@dimen/_10sdp" />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
+                    android:layout_height="140sp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10sp"
+                    android:id="@+id/selling"
                     android:visibility="gone"
-                    android:weightSum="3"
-                    android:orientation="horizontal">
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="140sp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="10sp"
-                        android:id="@+id/promo"
-                        android:background="@drawable/bestpromo"/>
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="140sp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="10sp"
-                        android:id="@+id/selling"
-                        android:visibility="gone"
-                        android:background="@drawable/bestselling"/>
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="140sp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="10sp"
-                        android:id="@+id/fruits"
-                        android:visibility="gone"
-                        android:background="@drawable/fruit"/>
-
-
-                        <Button
-                            android:id="@+id/newpdt"
-                            android:layout_width="match_parent"
-                            android:layout_height="140sp"
-                            android:layout_marginEnd="10sp"
-                            android:layout_weight="1"
-                            android:visibility="gone"
-                            android:background="@drawable/newproduct" />
-
-                        <Button
-                            android:id="@+id/vegetables"
-                            android:layout_width="match_parent"
-                            android:layout_height="140sp"
-                            android:layout_marginEnd="10sp"
-                            android:layout_weight="1"
-                            android:background="@drawable/vegetables" />
-
-                        <Button
-                            android:id="@+id/fastfood"
-                            android:layout_width="match_parent"
-                            android:layout_height="140sp"
-                            android:layout_marginEnd="10sp"
-                            android:layout_weight="1"
-                            android:background="@drawable/fastfood" />
-
-                </LinearLayout>
-
-
-                <TextView
+                    android:background="@drawable/bestselling"/>
+                <Button
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="35sp"
-                    android:text="@string/categories"
-                    android:textColor="#D71147"
-                    android:id="@+id/Featured"
-                    android:background="#FAFBFB"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="@dimen/_18sdp"/>
+                    android:layout_height="140sp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10sp"
+                    android:id="@+id/fruits"
+                    android:visibility="gone"
+                    android:background="@drawable/fruit"/>
+
+
+                    <Button
+                        android:id="@+id/newpdt"
+                        android:layout_width="match_parent"
+                        android:layout_height="140sp"
+                        android:layout_marginEnd="10sp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:background="@drawable/newproduct" />
+
+                    <Button
+                        android:id="@+id/vegetables"
+                        android:layout_width="match_parent"
+                        android:layout_height="140sp"
+                        android:layout_marginEnd="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/vegetables" />
+
+                    <Button
+                        android:id="@+id/fastfood"
+                        android:layout_width="match_parent"
+                        android:layout_height="140sp"
+                        android:layout_marginEnd="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/fastfood" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/categories"
+                android:textColor="#D71147"
+                android:id="@+id/Featured"
+                android:background="#FAFBFB"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/_18sdp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rcvCategories"
@@ -144,11 +145,12 @@
                     android:paddingStart="@dimen/_10sdp"
                     android:paddingEnd="@dimen/_10sdp" />
 
+            </RelativeLayout>
 
 
 
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>

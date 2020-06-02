@@ -29,6 +29,7 @@
 
         <activity android:name=".activity.HomeScreen"
             android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".activity.RegistrationScreen"/>
         <activity android:name=".activity.SubCategoryScreen"/>
         <activity android:name=".activity.MyAccountScreen"/>
         <activity android:name=".activity.EditAccount"/>
