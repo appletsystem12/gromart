@@ -9,4 +9,8 @@
     <color name="grey_border">#D6D6D6</color>
     <color name="grey">#ACAAAA</color>
     <color name="d_grey">#676666</color>
+    <color name="orange">#fe6a5b</color>
+    <color name="l_pink">#fa578d</color>
+    <color name="l_orange">#fe6270</color>
+    <color name="ll_orange">#E37440</color>
 </resources>

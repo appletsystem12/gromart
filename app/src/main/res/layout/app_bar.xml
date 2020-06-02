@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottomBar"
+        android:layout_above="@+id/bottomNavigation"
         android:layout_alignParentTop="true"
         android:orientation="vertical">
 
@@ -33,7 +33,18 @@
         app:iconSize="@dimen/_16sdp"
         app:textSize="@dimen/_12sdp"
         app:itemPadding="10dp"
+        android:visibility="gone"
         app:menu="@menu/menu"/>
+
+    <it.sephiroth.android.library.bottomnavigation.BottomNavigation
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        app:bbn_entries="@menu/menu"
+        app:bbn_scrollEnabled="true"
+        app:layout_behavior="@string/bbn_phone_view_behavior" />
 
 
 

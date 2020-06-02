@@ -1,31 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:bbn_itemColorActive="#FFFFFFFF"
+    app:bbn_itemColorInactive="#7FFFFFFF"
+    app:bbn_badgeColor="#FFCC0000"
+    app:bbn_rippleColor="#99FFFFFF">
     <item
         android:id="@+id/nav_item_home"
         android:title="Home"
-        android:icon="@mipmap/home_run"
-        app:showAsAction="ifRoom" />
+        android:icon="@mipmap/my_home"
+
+        app:showAsAction="ifRoom"
+
+        />
     <!-- android:icon="@mipmap/house"-->
-
-
     <item
-        android:id="@+id/nav_item_notes"
-        android:title="Order"
-        android:icon="@mipmap/order"
+        android:id="@+id/nav_item_category"
+        android:icon="@mipmap/my_menu"
+
+
+        android:title="Category"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/nav_item_test"
-        android:icon="@mipmap/wallet"
+        android:id="@+id/nav_item_order"
+        android:title="Order"
+        android:icon="@mipmap/my_orders"
+
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_item_wallet"
+        android:icon="@mipmap/my_wallet"
+
         android:title="Wallet"
         app:showAsAction="ifRoom" />
 
-   <!-- <item
+
+
+    <!--<item
         android:id="@+id/nav_item_chat"
-        android:icon="@mipmap/speech_bubble"
+        android:icon="@mipmap/my_conversation"
         android:title="Chat"
-        android:visible="false"
+        android:color="@color/ll_orange"
         app:showAsAction="ifRoom" />-->
 
 

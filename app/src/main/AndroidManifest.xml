@@ -34,6 +34,9 @@
         <activity android:name=".activity.EditAccount"/>
         <activity android:name=".activity.ShopByCategoryScreen"/>
         <activity android:name=".activity.CartScreen"/>
+        <activity android:name=".activity.SubscriptionScreen"/>
+        <activity android:name=".activity.WalletScreen"/>
+        <activity android:name=".activity.OrderScreen"/>
         <activity android:name=".activity.DeliveryScreen"
             android:configChanges="keyboardHidden"/>
 
