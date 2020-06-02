@@ -24,7 +24,6 @@
                 android:id="@+id/menu"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="10dp"
-
                 android:contentDescription="@string/app_name" />
 
             <ImageButton

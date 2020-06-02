@@ -21,7 +21,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="@dimen/_30sdp"
-
             >
 
             <RelativeLayout
@@ -129,9 +128,7 @@
                     android:id="@+id/tv_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:layout_centerHorizontal="true"
-
                     android:background="@drawable/pink_button"
                     android:gravity="center"
                     android:padding="@dimen/_8sdp"
