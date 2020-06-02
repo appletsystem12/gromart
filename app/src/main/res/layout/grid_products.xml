@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/toned"
+
+            android:id="@+id/ivProduct"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mother Dairy"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_10sdp"
+            android:id="@+id/tvProductName"
+            android:layout_below="@+id/ivProduct"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mother dairy Toned Milk"
+            android:textColor="#D71149"
+            android:layout_marginTop="5sp"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="5sp"
+            android:id="@+id/tvProductName1"
+            android:textSize="@dimen/_12sdp"
+            android:layout_below="@+id/tvProductName"/>
+
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvProductName1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5sp"
+            android:text="MRP RS 56"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"
+            android:textStyle="bold"
+            android:text="Buy"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_buy"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_below="@+id/tv_price"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUBSCRIBE"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_subscribe"
+            android:layout_below="@+id/tv_buy"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

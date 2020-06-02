@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        drawable="@mipmap/home_run"
+        text="Home" />
+
+    <tab
+        drawable="@mipmap/order"
+        text="Order" />
+
+    <tab
+        drawable="@mipmap/wallet"
+        text="Wallet" />
+
+    <tab
+        drawable="@mipmap/speech_bubble"
+        text="Chat" />
+
+
+</tabs>

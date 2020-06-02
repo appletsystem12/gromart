@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">gromart</string>
+    <string name="drawerOpen">drawerOpen</string>
+    <string name="drawerClose">drawerClose</string>
+    <string name="desc">Image</string>
+    <string name="find_products">Find Products</string>
+    <string name="Popular_Search">Popular Search</string>
+    <string name="categories">Categories</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
