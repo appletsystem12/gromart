@@ -65,6 +65,7 @@ public class GlobalClass extends Application {
     public void onCreate() {
         super.onCreate();
 
+      //  TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/Montserrat-Regular.ttf");
         TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/Overlock-Regular.ttf");
     }
 

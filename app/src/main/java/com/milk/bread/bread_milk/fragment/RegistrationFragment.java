@@ -17,8 +17,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.milk.bread.bread_milk.R;
 import com.milk.bread.bread_milk.activity.LoginActivity;
-import com.milk.bread.bread_milk.activity.RegistrationScreen;
-
 import java.util.Objects;
 
 public class RegistrationFragment extends Fragment {

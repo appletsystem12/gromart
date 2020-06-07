@@ -57,9 +57,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-    public static int pxToDp(int px) {
-        return (int) (px / Resources.getSystem().getDisplayMetrics().density);
-    }
+
 
 
 }
