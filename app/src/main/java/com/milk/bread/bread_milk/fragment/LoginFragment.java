@@ -272,7 +272,7 @@ public class LoginFragment extends Fragment {
             js.put("request_token", "dsfds9f79sd7fdsf");
             js.put("device", "mobile");
             js.put("mobile", mobile_edt.getText().toString());
-            js.put("country_code", ccp.getSeglectedCountryCode());
+            js.put("country_code", ccp.getSelectedCountryCode());
 
             Log.d(TAG, "reference_book: js >  "+js.toString());
         }catch (Exception e){
