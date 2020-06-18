@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@drawable/mobile_ui_white"
         android:layout_marginTop="@dimen/_10sdp"
         android:orientation="vertical">
@@ -20,7 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginRight="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_50sdp"
             >
 
             <RelativeLayout
@@ -48,14 +50,22 @@
                 android:layout_below="@+id/rl_logo"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:padding="10dp">
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_textColor="@color/colorAccent"
+                    android:layout_centerVertical="true"/>
 
                 <EditText
+                    android:id="@+id/mobile_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toStartOf="@+id/iv_phn"
                     android:background="@android:color/transparent"
                     android:hint="Mobile Number"
+                    android:layout_toEndOf="@+id/ccp"
                     android:textColor="@color/colorAccent"
                     android:textColorHint="@color/d_grey"
                     android:textSize="@dimen/_16sdp" />
@@ -84,10 +94,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rl_mobile"
+                android:visibility="gone"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:padding="10dp">
 
                 <EditText
+                    android:id="@+id/otp_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -110,11 +122,13 @@
             </RelativeLayout>
 
             <View
+                android:id="@+id/view_otp"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_below="@+id/rl_otp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
+                android:visibility="gone"
                 android:background="@color/grey_border" />
 
             <RelativeLayout
@@ -132,45 +146,46 @@
                     android:background="@drawable/pink_button"
                     android:gravity="center"
                     android:padding="@dimen/_8sdp"
-                    android:text="Login"
+                    android:visibility="gone"
+                    android:text="Continue"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_18sdp" />
                 <TextView
-                    android:id="@+id/tv_text"
+                    android:id="@+id/tv_generate_otp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_login"
                     android:layout_centerHorizontal="true"
+                    android:background="@drawable/pink_button"
                     android:gravity="center"
                     android:padding="@dimen/_8sdp"
-                    android:text="Login"
-                    android:visibility="gone"
-                    android:textColor="@color/black"
+                    android:text="Get Code"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/_18sdp" />
             </RelativeLayout>
 
 
 
-            <RelativeLayout
-                android:id="@+id/rl_down"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginTop="@dimen/_50sdp"
-                android:layout_below="@+id/rl_login"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/circle_orange_gradient_bg">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_centerInParent="true"
-                    android:src="@mipmap/download"
-
-                   />
-            </RelativeLayout>
         </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_down"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_65sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/circle_orange_gradient_bg">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:src="@mipmap/download"
+
+                />
+        </RelativeLayout>
     </RelativeLayout>
 
 
